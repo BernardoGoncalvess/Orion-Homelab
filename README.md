@@ -53,21 +53,32 @@ After running the first version for a while, I rebuilt the server with a cleaner
 ```
 orion-homelab/
 ├── README.md
+├── LICENSE
+├── .gitignore
 ├── docs/
 │   ├── architecture.md
 │   ├── remote-access.md
-│   └── backups.md
+│   ├── backups.md             # planned
+│   └── images/
+│       ├── architecture.png
+│       ├── orion-hardware.jpg
+│       └── nextcloud-devices.png
 ├── docker/
 │   ├── nextcloud/
 │   │   ├── docker-compose.yml
 │   │   ├── .env.example
 │   │   └── README.md
 │   ├── vaultwarden/
-│   ├── pihole/            # planned
-│   └── gitea/             # planned
-├── scripts/
-│   └── backup-nextcloud.sh
-└── .gitignore
+│   │   ├── docker-compose.yml
+│   │   ├── .env.example
+│   │   └── README.md
+│   ├── pihole/                # planned
+│   └── gitea/                 # planned
+├── cloudflared/
+│   ├── config.example.yml
+│   └── README.md
+└── scripts/
+    └── backup-nextcloud.sh    # planned
 ```
 
 ## Getting started
