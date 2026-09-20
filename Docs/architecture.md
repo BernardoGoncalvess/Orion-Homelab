@@ -2,7 +2,7 @@
 
 Orion is a single home server running Ubuntu Server. Every service runs in its own Docker container, defined in its own folder under [`docker/`](../docker).
 
-![Orion architecture](images/architecture.png)
+![Orion architecture](Images/architecture.png)
 
 ## Components
 
