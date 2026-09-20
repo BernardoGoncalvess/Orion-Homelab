@@ -6,13 +6,13 @@ I built it to learn how self-hosting works end to end (containers, networking, r
 
 ## Services
 
-| Service | Purpose | Status |
-|---|---|---|
-| [Nextcloud](docker/nextcloud) | File storage and sync (Windows, macOS, iOS clients) with a MariaDB backend | Running |
-| [Vaultwarden](docker/vaultwarden) | Self-hosted password manager | Running |
-| Cloudflare Tunnel | Secure remote access to Nextcloud and Vaultwarden, no ports opened on the router | Running |
-| Pi-hole | DNS-level ad and tracker blocking for the home network | Planned |
-| Gitea | Self-hosted Git server | Planned |
+| Service                           | Purpose                                                                          | Status  |
+| --------------------------------- | -------------------------------------------------------------------------------- | ------- |
+| [Nextcloud](docker/nextcloud)     | File storage and sync (Windows, macOS, iOS clients) with a MariaDB backend       | Running |
+| [Vaultwarden](docker/vaultwarden) | Self-hosted password manager                                                     | Running |
+| Cloudflare Tunnel                 | Secure remote access to Nextcloud and Vaultwarden, no ports opened on the router | Running |
+| Pi-hole                           | DNS-level ad and tracker blocking for the home network                           | Planned |
+| Gitea                             | Self-hosted Git server                                                           | Planned |
 
 ## Architecture
 
@@ -35,17 +35,19 @@ More detail in [docs/architecture.md](docs/architecture.md).
 
 ## Hardware
 
-- **Machine:** _[fill in model]_
-- **CPU / RAM:** _[fill in]_
-- **Storage:** _[fill in]_
+- **Machine:** Mac Mini 2012
+- **CPU / RAM:** Intel i5 3210M 16GB
+- **Storage:** 480GB
 - **OS:** Ubuntu Server
 
 ## Key decisions and problems solved
 
 ### Remote access: why Cloudflare Tunnel and not WireGuard
+
 My first plan was a WireGuard VPN. It did not work because my ISP places the connection behind CGNAT / double NAT, so incoming connections never reach the server. Instead of fighting the ISP, I switched to Cloudflare Tunnel: the server makes an outbound connection, so no port forwarding is needed. Full write-up in [docs/remote-access.md](docs/remote-access.md).
 
 ### Rebuilding Orion from scratch
+
 After running the first version for a while, I rebuilt the server with a cleaner structure: one folder per service, each with its own `docker-compose.yml` and `.env.example`. Services are being brought back one at a time.
 
 ## Repository structure
