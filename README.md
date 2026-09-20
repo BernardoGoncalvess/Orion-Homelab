@@ -31,7 +31,7 @@ flowchart LR
     LAN -.-> GT
 ```
 
-More detail in [docs/architecture.md](Docs/architecture.md).
+More detail in [docs/architecture.md](docs/architecture.md).
 
 ## Hardware
 
@@ -44,7 +44,7 @@ More detail in [docs/architecture.md](Docs/architecture.md).
 
 ### Remote access: why Cloudflare Tunnel and not WireGuard
 
-My first plan was a WireGuard VPN. It did not work because my ISP places the connection behind CGNAT / double NAT, so incoming connections never reach the server. Instead of fighting the ISP, I switched to Cloudflare Tunnel: the server makes an outbound connection, so no port forwarding is needed. Full write-up in [docs/remote-access.md](Docs/remote-access.md).
+My first plan was a WireGuard VPN. It did not work because my ISP places the connection behind CGNAT / double NAT, so incoming connections never reach the server. Instead of fighting the ISP, I switched to Cloudflare Tunnel: the server makes an outbound connection, so no port forwarding is needed. Full write-up in [docs/remote-access.md](docs/remote-access.md).
 
 ### Rebuilding Orion from scratch
 
