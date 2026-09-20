@@ -1,0 +1,7 @@
+.env
+*.deb
+*.pem
+*.json          # credenciais do túnel da Cloudflare
+data/
+db/
+vaultwarden/data/
