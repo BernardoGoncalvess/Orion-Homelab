@@ -89,7 +89,6 @@ Each service lives in its own folder and can be deployed independently.
 
 ```bash
 cd docker/nextcloud
-cp .env.example .env      # fill in your own values
 docker compose up -d
 ```
 
