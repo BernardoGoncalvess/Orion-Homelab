@@ -1,0 +1,16 @@
+# Example Cloudflare Tunnel configuration (placeholders only).
+# On the server this file lives at /etc/cloudflared/config.yml.
+
+tunnel: <TUNNEL_ID>
+# Secret file created with the tunnel. Never commit it.
+credentials-file: /etc/cloudflared/<TUNNEL_ID>.json
+
+ingress:
+  - hostname: vault.example.com
+    service: http://localhost:8181
+  - hostname: ssh.example.com
+    service: ssh://localhost:22
+  - hostname: nextcloud.example.com
+    service: http://localhost:8080
+  # Catch-all rule: anything else returns 404. Must be last.
+  - service: http_status:404
