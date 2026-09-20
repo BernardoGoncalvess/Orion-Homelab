@@ -68,11 +68,9 @@ orion-homelab/
 ├── docker/
 │   ├── nextcloud/
 │   │   ├── docker-compose.yml
-│   │   ├── .env.example
-│   │   └── README.md
+│   │   └──.env.example
 │   ├── vaultwarden/
 │   │   ├── docker-compose.yml
-│   │   ├── .env.example
 │   │   └── README.md
 │   ├── pihole/                # planned
 │   └── gitea/                 # planned
